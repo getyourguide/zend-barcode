@@ -9,7 +9,7 @@ namespace ZendTest\Barcode;
 
 use PHPUnit\Framework\TestCase;
 use Zend\Barcode\Exception\InvalidArgumentException;
-use Zend\Barcode\CObject\AbstractObject;
+use Zend\Barcode\ZendObject\AbstractObject;
 use Zend\Barcode\ObjectPluginManager;
 use Zend\ServiceManager\ServiceManager;
 use Zend\ServiceManager\Test\CommonPluginManagerTrait;

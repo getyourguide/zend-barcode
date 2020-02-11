@@ -9,7 +9,7 @@ namespace ZendTest\Barcode\Renderer;
 
 use ZendPdf as Pdf;
 use Zend\Barcode;
-use Zend\Barcode\CObject\Code39;
+use Zend\Barcode\ZendObject\Code39;
 
 /**
  * @group      Zend_Barcode

@@ -36,45 +36,45 @@ class ObjectPluginManager extends AbstractPluginManager
      * @var array
      */
     protected $aliases = [
-		'codabar'           => CObject\Codabar::class,
-		'code128'           => CObject\Code128::class,
-		'code25'            => CObject\Code25::class,
-		'code25interleaved' => CObject\Code25interleaved::class,
-		'code39'            => CObject\Code39::class,
-		'ean13'             => CObject\Ean13::class,
-		'ean2'              => CObject\Ean2::class,
-		'ean5'              => CObject\Ean5::class,
-		'ean8'              => CObject\Ean8::class,
-		'error'             => CObject\Error::class,
-		'identcode'         => CObject\Identcode::class,
-		'itf14'             => CObject\Itf14::class,
-		'leitcode'          => CObject\Leitcode::class,
-		'planet'            => CObject\Planet::class,
-		'postnet'           => CObject\Postnet::class,
-		'royalmail'         => CObject\Royalmail::class,
-		'upca'              => CObject\Upca::class,
-		'upce'              => CObject\Upce::class,
+		'codabar'           => ZendObject\Codabar::class,
+		'code128'           => ZendObject\Code128::class,
+		'code25'            => ZendObject\Code25::class,
+		'code25interleaved' => ZendObject\Code25interleaved::class,
+		'code39'            => ZendObject\Code39::class,
+		'ean13'             => ZendObject\Ean13::class,
+		'ean2'              => ZendObject\Ean2::class,
+		'ean5'              => ZendObject\Ean5::class,
+		'ean8'              => ZendObject\Ean8::class,
+		'error'             => ZendObject\Error::class,
+		'identcode'         => ZendObject\Identcode::class,
+		'itf14'             => ZendObject\Itf14::class,
+		'leitcode'          => ZendObject\Leitcode::class,
+		'planet'            => ZendObject\Planet::class,
+		'postnet'           => ZendObject\Postnet::class,
+		'royalmail'         => ZendObject\Royalmail::class,
+		'upca'              => ZendObject\Upca::class,
+		'upce'              => ZendObject\Upce::class,
     ];
 
     protected $factories = [
-		CObject\Codabar::class           => InvokableFactory::class,
-		CObject\Code128::class           => InvokableFactory::class,
-		CObject\Code25::class            => InvokableFactory::class,
-		CObject\Code25interleaved::class => InvokableFactory::class,
-		CObject\Code39::class            => InvokableFactory::class,
-		CObject\Ean13::class             => InvokableFactory::class,
-		CObject\Ean2::class              => InvokableFactory::class,
-		CObject\Ean5::class              => InvokableFactory::class,
-		CObject\Ean8::class              => InvokableFactory::class,
-		CObject\Error::class             => InvokableFactory::class,
-		CObject\Identcode::class         => InvokableFactory::class,
-		CObject\Itf14::class             => InvokableFactory::class,
-		CObject\Leitcode::class          => InvokableFactory::class,
-		CObject\Planet::class            => InvokableFactory::class,
-		CObject\Postnet::class           => InvokableFactory::class,
-		CObject\Royalmail::class         => InvokableFactory::class,
-		CObject\Upca::class              => InvokableFactory::class,
-		CObject\Upce::class              => InvokableFactory::class,
+		ZendObject\Codabar::class           => InvokableFactory::class,
+		ZendObject\Code128::class           => InvokableFactory::class,
+		ZendObject\Code25::class            => InvokableFactory::class,
+		ZendObject\Code25interleaved::class => InvokableFactory::class,
+		ZendObject\Code39::class            => InvokableFactory::class,
+		ZendObject\Ean13::class             => InvokableFactory::class,
+		ZendObject\Ean2::class              => InvokableFactory::class,
+		ZendObject\Ean5::class              => InvokableFactory::class,
+		ZendObject\Ean8::class              => InvokableFactory::class,
+		ZendObject\Error::class             => InvokableFactory::class,
+		ZendObject\Identcode::class         => InvokableFactory::class,
+		ZendObject\Itf14::class             => InvokableFactory::class,
+		ZendObject\Leitcode::class          => InvokableFactory::class,
+		ZendObject\Planet::class            => InvokableFactory::class,
+		ZendObject\Postnet::class           => InvokableFactory::class,
+		ZendObject\Royalmail::class         => InvokableFactory::class,
+		ZendObject\Upca::class              => InvokableFactory::class,
+		ZendObject\Upce::class              => InvokableFactory::class,
 
 		// v2 canonical FQCNs
 
@@ -98,7 +98,7 @@ class ObjectPluginManager extends AbstractPluginManager
 		'zendbarcodeobjectupce'              => InvokableFactory::class,
     ];
 
-    protected $instanceOf = CObject\AbstractObject::class;
+    protected $instanceOf = ZendObject\AbstractObject::class;
 
     /**
      * Validate the plugin is of the expected type (v3).
@@ -136,7 +136,7 @@ class ObjectPluginManager extends AbstractPluginManager
             throw new Exception\InvalidArgumentException(sprintf(
                 'Plugin of type %s is invalid; must extend %s',
                 (is_object($plugin) ? get_class($plugin) : gettype($plugin)),
-                CObject\AbstractObject::class
+                ZendObject\AbstractObject::class
             ), $e->getCode(), $e);
         }
     }
