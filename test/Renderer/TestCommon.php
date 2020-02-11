@@ -8,9 +8,9 @@
 namespace ZendTest\Barcode\Renderer;
 
 use PHPUnit\Framework\TestCase;
-use ZendTest\Barcode\Object\TestAsset;
+use ZendTest\Barcode\CObject\TestAsset;
 use Zend\Barcode;
-use Zend\Barcode\Object\Code39;
+use Zend\Barcode\CObject\Code39;
 use Zend\Config;
 
 abstract class TestCommon extends TestCase

@@ -12,9 +12,9 @@ use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 use Zend\Barcode;
 use Zend\Barcode\Exception\InvalidArgumentException;
-use Zend\Barcode\Object\Code25;
-use Zend\Barcode\Object\Code39;
-use Zend\Barcode\Object\Error;
+use Zend\Barcode\CObject\Code25;
+use Zend\Barcode\CObject\Code39;
+use Zend\Barcode\CObject\Error;
 use Zend\Barcode\Renderer;
 use Zend\Barcode\Renderer\Image;
 use Zend\Barcode\Renderer\Pdf;
@@ -236,17 +236,17 @@ class FactoryTest extends TestCase
     public function testBarcodeObjectFactoryWithNamespace()
     {
         $plugins = Barcode\Barcode::getObjectPluginManager();
-        $plugins->setInvokableClass('barcodeNamespace', Object\TestAsset\BarcodeNamespace::class);
+        $plugins->setInvokableClass('barcodeNamespace', CObject\TestAsset\BarcodeNamespace::class);
         $barcode = Barcode\Barcode::makeBarcode('barcodeNamespace');
-        $this->assertInstanceOf(Object\TestAsset\BarcodeNamespace::class, $barcode);
+        $this->assertInstanceOf(CObject\TestAsset\BarcodeNamespace::class, $barcode);
     }
 
     public function testBarcodeObjectFactoryWithNamespaceExtendStandardLibray()
     {
         $plugins = Barcode\Barcode::getObjectPluginManager();
-        $plugins->setInvokableClass('error', \ZendTest\Barcode\Object\TestAsset\Error::class);
+        $plugins->setInvokableClass('error', \ZendTest\Barcode\CObject\TestAsset\Error::class);
         $barcode = Barcode\Barcode::makeBarcode('error');
-        $this->assertInstanceOf(\ZendTest\Barcode\Object\TestAsset\Error::class, $barcode);
+        $this->assertInstanceOf(\ZendTest\Barcode\CObject\TestAsset\Error::class, $barcode);
     }
 
     public function testBarcodeObjectFactoryWithNamespaceButWithoutExtendingObjectAbstract()
@@ -254,7 +254,7 @@ class FactoryTest extends TestCase
         $plugins = Barcode\Barcode::getObjectPluginManager();
         $plugins->setInvokableClass(
             'barcodeNamespaceWithoutExtendingObjectAbstract',
-            Object\TestAsset\BarcodeNamespaceWithoutExtendingObjectAbstract::class
+            CObject\TestAsset\BarcodeNamespaceWithoutExtendingObjectAbstract::class
         );
 
         try {

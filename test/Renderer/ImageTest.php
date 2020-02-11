@@ -8,7 +8,7 @@
 namespace ZendTest\Barcode\Renderer;
 
 use Zend\Barcode;
-use Zend\Barcode\Object\Code39;
+use Zend\Barcode\CObject\Code39;
 use Zend\Barcode\Renderer as RendererNS;
 
 /**
