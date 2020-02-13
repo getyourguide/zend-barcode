@@ -7,10 +7,6 @@
         "zendframework",
         "barcode"
     ],
-    "repositories": [
-        {"type": "composer", "url": "https://repo.packagist.com/getyourguide/"},
-        {"packagist": false}
-    ],
     "support": {
         "docs": "https://docs.zendframework.com/zend-barcode/",
         "issues": "https://github.com/zendframework/zend-barcode/issues",
