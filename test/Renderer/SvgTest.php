@@ -9,7 +9,7 @@ namespace ZendTest\Barcode\Renderer;
 
 use Zend\Barcode;
 use Zend\Barcode\Renderer\Svg;
-use Zend\Barcode\Object\Code39;
+use Zend\Barcode\ZendObject\Code39;
 
 /**
  * @group      Zend_Barcode

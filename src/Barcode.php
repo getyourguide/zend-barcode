@@ -21,7 +21,7 @@ abstract class Barcode
      * Default barcode TTF font name
      *
      * It's used by standard barcode objects derived from
-     * {@link Object\AbstractObject} class
+     * {@link ZendObject\AbstractObject} class
      * if corresponding constructor option is not provided.
      *
      * @var string
@@ -145,12 +145,12 @@ abstract class Barcode
      *
      * @param mixed $barcode        String name of barcode class, or Traversable object, or barcode object.
      * @param mixed $barcodeConfig  OPTIONAL; an array or Traversable object with barcode parameters.
-     * @throws Exception\InvalidArgumentException
-     * @return Object\ObjectInterface
+     * @return ZendObject\ObjectInterface
+     *@throws Exception\InvalidArgumentException
      */
     public static function makeBarcode($barcode, $barcodeConfig = [])
     {
-        if ($barcode instanceof Object\ObjectInterface) {
+        if ($barcode instanceof ZendObject\ObjectInterface) {
             return $barcode;
         }
 
@@ -249,7 +249,7 @@ abstract class Barcode
     /**
      * Proxy to renderer render() method
      *
-     * @param string | Object\ObjectInterface | array | Traversable $barcode
+     * @param string | ZendObject\ObjectInterface | array | Traversable $barcode
      * @param string | Renderer\RendererInterface $renderer
      * @param array  | Traversable $barcodeConfig
      * @param array  | Traversable $rendererConfig
@@ -266,7 +266,7 @@ abstract class Barcode
     /**
      * Proxy to renderer draw() method
      *
-     * @param string | Object\ObjectInterface | array | Traversable $barcode
+     * @param string | ZendObject\ObjectInterface | array | Traversable $barcode
      * @param string | Renderer\RendererInterface $renderer
      * @param array | Traversable $barcodeConfig
      * @param array | Traversable $rendererConfig

@@ -14,19 +14,19 @@ implementations. These options can be set in three ways:
 ## Different ways to parameterize a barcode object
 
 ```php
-use Zend\Barcode\Object;
+use Zend\Barcode\ZendObject;
 
 $options = ['text' => 'ZEND-FRAMEWORK', 'barHeight' => 40];
 
 // Case 1: constructor
-$barcode = new Object\Code39($options);
+$barcode = new ZendObject\Code39($options);
 
 // Case 2: setOptions()
-$barcode = new Object\Code39();
+$barcode = new ZendObject\Code39();
 $barcode->setOptions($options);
 
 // Case 3: individual setters
-$barcode = new Object\Code39();
+$barcode = new ZendObject\Code39();
 $barcode->setText('ZEND-FRAMEWORK')
     ->setBarHeight(40);
 ```
