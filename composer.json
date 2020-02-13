@@ -15,6 +15,10 @@
         "chat": "https://zendframework-slack.herokuapp.com",
         "forum": "https://discourse.zendframework.com/c/questions/components"
     },
+    "repositories": [
+        {"type": "composer", "url": "https://repo.packagist.com/getyourguide/"},
+        {"packagist": false}
+    ],
     "require": {
         "php": "^5.6 || ^7.0",
         "zendframework/zend-servicemanager": "^2.7.8 || ^3.3",
@@ -22,6 +26,7 @@
         "zendframework/zend-validator": "^2.10.1"
     },
     "require-dev": {
+        "gyg/zendpdf": "^2.0.2",
         "phpunit/phpunit": "^5.7.23 || ^6.4.3",
         "zendframework/zend-coding-standard": "~1.0.0",
         "zendframework/zend-config": "^2.6 || ^3.1"
