@@ -22,7 +22,7 @@ abstract class AbstractObject implements ObjectInterface
      *
      * @var string
      */
-    protected $barcodeNamespace = 'Zend\Barcode\Object';
+    protected $barcodeNamespace = 'Zend\Barcode\ZendObject';
 
     /**
      * Set of drawing instructions

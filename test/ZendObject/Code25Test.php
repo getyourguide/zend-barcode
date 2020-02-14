@@ -81,7 +81,7 @@ class Code25Test extends TestCommon
 
     public function testBadTextDetectedIfChecksumWished()
     {
-        $this->expectException('\Zend\Barcode\Object\Exception\ExceptionInterface');
+        $this->expectException('\Zend\Barcode\ZendObject\Exception\ExceptionInterface');
         $this->object->setText('a');
         $this->object->setWithChecksum(true);
         $this->object->getText();
@@ -95,7 +95,7 @@ class Code25Test extends TestCommon
 
     public function testCheckParamsWithLowRatio()
     {
-        $this->expectException('\Zend\Barcode\Object\Exception\ExceptionInterface');
+        $this->expectException('\Zend\Barcode\ZendObject\Exception\ExceptionInterface');
         $this->object->setText('0123456789');
         $this->object->setBarThinWidth(21);
         $this->object->setBarThickWidth(40);
@@ -104,7 +104,7 @@ class Code25Test extends TestCommon
 
     public function testCheckParamsWithHighRatio()
     {
-        $this->expectException('\Zend\Barcode\Object\Exception\ExceptionInterface');
+        $this->expectException('\Zend\Barcode\ZendObject\Exception\ExceptionInterface');
         $this->object->setText('0123456789');
         $this->object->setBarThinWidth(20);
         $this->object->setBarThickWidth(61);

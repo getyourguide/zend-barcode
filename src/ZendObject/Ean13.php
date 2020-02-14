@@ -153,7 +153,7 @@ class Ean13 extends AbstractObject
      */
     protected function drawText()
     {
-        if (get_class($this) == 'Zend\Barcode\Object\Ean13') {
+        if (get_class($this) == 'Zend\Barcode\ZendObject\Ean13') {
             $this->drawEan13Text();
         } else {
             parent::drawText();
