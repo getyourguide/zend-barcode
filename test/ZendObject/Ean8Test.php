@@ -74,7 +74,7 @@ class Ean8Test extends TestCommon
 
     public function testBadTextDetectedIfChecksumWished()
     {
-        $this->expectException('\Zend\Barcode\Object\Exception\ExceptionInterface');
+        $this->expectException('\Zend\Barcode\ZendObject\Exception\ExceptionInterface');
         $this->object->setText('a');
         $this->object->setWithChecksum(true);
         $this->object->getText();
